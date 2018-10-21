@@ -8,46 +8,50 @@ body {margin:0;}
 		  width: 100%;
 		  transition: 0.2s;
 	}
-	 .container {
+	 .container-fluid {
 		text-align: center;	
 		width: 100%;
-		margin: 0px;
-		padding: 0px;
+		margin: 0px 0px;
+		padding: 0px 0px;
 		border: 0px;
 	}
-	.container .row .col {
+	.container-fluid .row .col {
 		text-align: center;
 		width: 100%;
 		margin: 0px;
 		padding: 0px;
 		border: 0px;
 	}
-	.container .row {
+	.container-fluid .row {
 		width: 100%;
 		margin: 0px;
 		padding: 0px;
 		border: 0px;
 	}
-	.container .row .col img{
+	.container-fluid .row .col img{
 		float: left;
 		overflow: auto;
 		width: 80px;
 		height: 50%;
-		margin : 7% 0px;
+		margin-top: auto;
+		margin-bottom: auto;
 
 	}
 	#brand a {
 		margin: 0px;
 		padding: 0px;
-		border: 0.5px solid #ccc;
+		
 	}
 	#brand{
 		width: 100%;
 	    overflow: auto;
 	}
-	#brand a{
+	.container-fluid #brand .col{
+		width: 20%;
 		float: left;
-	    width: 20%;
+		border: 0.5px solid #ccc;
+	}
+	#brand a{
 	    text-align: center;
 	    transition: all 0.3s ease;
 	}
