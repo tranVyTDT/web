@@ -3,7 +3,7 @@ body {margin:0;}
 		 background-color: #fff;
 		  text-align: center;
 		  font-weight: bold;
-		  position: fixed;
+		 /* position: fixed;*/
 		  top: 0;
 		  width: 100%;
 		  transition: 0.2s;
@@ -23,12 +23,14 @@ body {margin:0;}
 		border: 0px;
 	}
 	.container-fluid .row .col h1{
-		font-size: 300%;
-		margin : 20px 0px;
+		font-size: 500%;
 	}
-	.container-fluid .row .col .glyphicon{
-		width:150px;
-		height:150px;
+	.container-fluid .row .col #login{
+		float: right;
+		width:80px;
+		height:30px;
+		padding: 0px;
+		margin-top: 45px;
 	}
 	.container-fluid .row {
 		width: 100%;
@@ -41,7 +43,7 @@ body {margin:0;}
 		overflow: auto;
 		width: 80px;
 		height: 50%;
-		margin: 20px 0px;
+		margin-top: 25px;
 		
 
 	}
