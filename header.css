@@ -3,7 +3,6 @@ body {margin:0;}
 		 background-color: #fff;
 		  text-align: center;
 		  font-weight: bold;
-		 /* position: fixed;*/
 		  top: 0;
 		  width: 100%;
 		  transition: 0.2s;
@@ -25,9 +24,8 @@ body {margin:0;}
 	.container-fluid .row .col h1{
 		font-size: 500%;
 	}
-	.container-fluid .row .col #login{
+	 #login a{
 		float: right;
-		width:80px;
 		height:30px;
 		padding: 0px;
 		margin-top: 45px;
