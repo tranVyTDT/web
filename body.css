@@ -4,3 +4,15 @@
 	border-right:  0.5px solid #ccc;
 	border-bottom:  1px solid #ccc;
 }
+#brandphone{
+	background-color: #f48fb1;
+	height: 50px;
+}
+#brandwatch{
+	background-color: #ffe082;
+	height: 50px;
+}
+#brandlaptop{
+	background-color: #80deea;
+	height: 50px;
+}

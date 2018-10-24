@@ -65,21 +65,21 @@ body {margin:0;}
 	}
 	#lg:hover{
 		 background-color: #f44336;
-		 color: #7f0000;
+		 color: #087f23;
 	}
 	#ss:hover{
-		 background-color: #3f51b5;
-		 color: #000051;
+		 background-color: #e91e63;
+		 color: #0069c0;
 	}
 	#ap:hover{
-		 background-color: #009688;
-		 color: #00251a;
+		 background-color: #9c27b0;
+		 color: #007ac1;
 	}
 	#so:hover{
-		 background-color: #ffeb3b;
-		 color: #bc5100;
+		 background-color: #673ab7;
+		 color: #008ba3;
 	}
 	#pi:hover{
-		 background-color: #78909c;
-		 color: #000a12	;
+		 background-color: #3f51b5;
+		 color: #00675b	;
 	}
