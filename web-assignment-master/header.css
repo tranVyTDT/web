@@ -21,11 +21,14 @@ body {margin:0;}
 		padding: 0px;
 		border: 0px;
 	}
+	.container-fluid .row .col h1{
+		font-size: 500%;
+	}
 	 #login a{
 		float: right;
 		height:30px;
 		padding: 0px;
-		text-decoration: none;
+		margin-top: 45px;
 	}
 	.container-fluid .row {
 		width: 100%;
@@ -36,8 +39,11 @@ body {margin:0;}
 	.container-fluid .row .col img{
 		float: left;
 		overflow: auto;
-		width: 100px;
-		height: 100px;
+		width: 80px;
+		height: 50%;
+		margin-top: 25px;
+		
+
 	}
 	#brand a {
 		margin: 0px;
@@ -59,21 +65,21 @@ body {margin:0;}
 	}
 	#lg:hover{
 		 background-color: #f44336;
-		 color: #087f23;
+		 color: #7f0000;
 	}
 	#ss:hover{
-		 background-color: #e91e63;
-		 color: #0069c0;
+		 background-color: #3f51b5;
+		 color: #000051;
 	}
 	#ap:hover{
-		 background-color: #9c27b0;
-		 color: #007ac1;
+		 background-color: #009688;
+		 color: #00251a;
 	}
 	#so:hover{
-		 background-color: #673ab7;
-		 color: #008ba3;
+		 background-color: #ffeb3b;
+		 color: #bc5100;
 	}
 	#pi:hover{
-		 background-color: #3f51b5;
-		 color: #00675b	;
+		 background-color: #78909c;
+		 color: #000a12	;
 	}

@@ -1,18 +1,33 @@
 .log{
-	border-top: 2px solid black;
+	border-top: 5px solid black;
 	border-left:  0.5px solid #ccc;
 	border-right:  0.5px solid #ccc;
-	border-bottom:  1px solid #ccc;
+	border-bottom:  2.5px solid #ccc;
 }
 #brandphone{
 	background-color: #f48fb1;
 	height: 50px;
+	margin: 0px;
+	width: 100%;
 }
 #brandwatch{
 	background-color: #ffe082;
 	height: 50px;
+	margin: 0px;
+	width: 100%;
 }
 #brandlaptop{
 	background-color: #80deea;
 	height: 50px;
+		margin: 0px;
+	width: 100%;
+}
+.logw{
+	height: 100%;
+}
+.card-img-top{
+	height: 77%;
+}
+.card-body{
+	height: 33%;
 }

@@ -7,17 +7,19 @@
 	<title> Your News</title>
 <link rel="stylesheet" type="text/css" href="header.css">
 <link rel="stylesheet" type="text/css" href="body.css">
+<link rel="stylesheet" type="text/css" href="footer.css">
 <link href="/open-iconic/font/css/open-iconic.css" rel="stylesheet">		
 <script src="header.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 	<div class="container-fluid fixed-top" id = "header">
 		<div class = "row ">
-			<div class = "col"><img src="icon.png"></div>
-			<div class = "col"><h1>Tech News</h1></div>
+			<div class = "col"><img class = "card-img-top" id = "icon" src="icon.png"></div>
+			<div class = "col"><h1 id="header1">Tech News</h1></div>
 			<div class = "col" id = "login">
-				<a href = "#">Sing In </a><span><a> | </a></span><a href="#">Sing Up</a>
+				<a href = "#" onclick="singin()">Sign In </a><span><a> | </a></span><a href="#">Sign Up</a>
 	        </div>
 		</div>
 		<div class = "row" id = "brand">
@@ -27,7 +29,7 @@
 			<div class = "col" id = "so"  href="#"><a  > SONY</a></div>
 			<div class = "col" id = "pi"  href="#"><a  > PIXEL</a></div>
 		</div>
-		<hr>
+		<hr style="margin-top: 0px">
 	</div>
 	<div class="container">
 		<div class = "row mx-5" style=" margin-top: 160px">
@@ -37,165 +39,234 @@
 				</iframe>
 			</div>
 		</div>
-		<div class="row px-5 py-3 mx-5">
-			<div class="col-md-8 log " >
+		<div class="row px-5 py-3 mx-5" >
+			<div class="col-md-8 ">
+				<div class="col-md-12 log logw">
 					<img class="card-img-top" src="lggram.jpg">
 					<div class="card-body">
-						<h2 class="card-text">new laptop form lg</h2>
+						<h2 class="card-title">new laptop form lg</h2>
 						<p class="card-text">by ttv</p>
 					</div>
+				</div>
 			</div>
-			<div class="col-md-4 log" >
-				<img class="card-img-top" src="lggram.jpg">
-				<div class="card-body">
-					<h2 class="card-text">new laptop form lg</h2>
-					<p class="card-text">by ttv</p>
+			<div class="col-md-4" >
+				<div class="col-md-12 log logw">
+					<img class="card-img-top" src="lggram.jpg">
+					<div class="card-body">
+						<h2 class="card-title">new laptop form lg</h2>
+						<p class="card-text">by ttv</p>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="row px-5 py-3 mx-5">
+		<div class="row px-5 py-3 mx-5" >
 			<div class="col-md-6">
-				<div class="row log">
-					<img class="card-img-top" src="lggram.jpg">
-					<div class="card-body">
-					<h2 class="card-text">new laptop form lg</h2>
-					<p class="card-text">by ttv</p>
-				</div>
-				</div>
-				<div class="row log">
-					<img class="card-img-top" src="lggram.jpg">
-					<div class="card-body">
-					<h2 class="card-text">new laptop form lg</h2>
-					<p class="card-text">by ttv</p>
-				</div>
+				<div class="col-md-12">
+					<div class="row pb-2">
+						<div class="col-md-12 log logw">
+							<img class="card-img-top" src="lggram.jpg">
+							<div class="card-body">
+								<h2 class="card-title">new laptop form lg</h2>
+								<p class="card-text">by ttv</p>
+							</div>
+						</div>
+					</div>
+					<div class="row  pt-2">
+						<div class="col-md-12 log logw">
+							<img class="card-img-top" src="lggram.jpg">
+							<div class="card-body">
+								<h2 class="card-title">new laptop form lg</h2>
+								<p class="card-text">by ttv</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="col-md-6 log" >
-				<img class="card-img-top" src="lggram.jpg">
-				<div class="card-body">
-					<h2 class="card-text">new laptop form lg</h2>
-					<p class="card-text">by ttv</p>
+			<div class="col-md-6" >
+				<div class="col-md-12 log logw">
+					<img class="card-img-top" src="lggram.jpg">
+					<div class="card-body">
+						<h2 class="card-title">new laptop form lg</h2>
+						<p class="card-text">by ttv</p>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="row px-5 py-3 mx-5 " >
-			<div class=" col-md-12 log">
-				<img class="card-img-top" src="lggram.jpg">
-				<div class="card-body">
-					<h2 class="card-text">new laptop form lg</h2>
-					<p class="card-text">by ttv</p>
+			<div class=" col-md-12">
+				<div class="col-md-12 log logw row " style="margin: 0px">
+						<div class="col-md-8">
+							<img class="card-img-top" src="lggram.jpg">
+						</div>
+						<div class="col-md-4">
+							<div class="card-body">
+								<h2 class="card-title">new laptop form lg</h2>
+								<p class="card-text">by ttv</p>
+							</div>
+						</div>
 				</div>
 			</div>
 		</div >
 		<div class=" row px-5 py-3 mx-5">
-			<div class="col-md-4 log card">
-					<img src="D:\web\webGithub\web\open-iconic-master\svg\phoneicon.svg" class="row" id = "brandphone" alt="icon name">
-					<img class="card-img-top" src="lggram.jpg">
+			<div class="col-md-4 ">
+				<div class="col-md-12 log logw">
+					<div class="row">
+						<img src="D:\web\webGithub\web\open-iconic-master\svg\phoneicon.svg" class="row" id = "brandphone" alt="icon name">
+					</div>
+					<img class="img-fluid" src="lggram.jpg">
 					<div class="card-body">
 						<h5 class="card-title">new laptop form lg</h5>
 						<p class="card-text">by ttv</p>
+						<hr>
 						<div class="row">
-							<div class="col-md-4">
+							<div class="col-md-6">
 					    		<img class="img-fluid" src="lggram.jpg">
 					    	</div>
-					    	<div class="col-md-8">
+					    	<div class="col-md-6">
 					    		<h5 class="card-title">new laptop form lg</h5>
 								<p class="card-text">by ttv</p>	
 					    	</div>
 						</div>
 						<div class="row">
-							<div class="col-md-4">
-						    	<img class="img-fluid" src="lggram.jpg">
-						    </div>
-						    <div class="col-md-8">
-						    		<h5 class="card-title">new laptop form lg</h5>
-									<p class="card-text">by ttv</p>	
-						    </div>
+							<div class="col-md-6">
+					    		<img class="img-fluid" src="lggram.jpg">
+					    	</div>
+					    	<div class="col-md-6">
+					    		<h5 class="card-title">new laptop form lg</h5>
+								<p class="card-text">by ttv</p>	
+					    	</div>
 						</div>
 						<div class="row">
-							<div class="col-md-4">
-						    	<img class="img-fluid" src="lggram.jpg">
-						    </div>
-						    <div class="col-md-8">
-						    		<h5 class="card-title">new laptop form lg</h5>
-									<p class="card-text">by ttv</p>	
-						    </div>
+							<div class="col-md-6">
+					    		<img class="img-fluid" src="lggram.jpg">
+					    	</div>
+					    	<div class="col-md-6">
+					    		<h5 class="card-title">new laptop form lg</h5>
+								<p class="card-text">by ttv</p>	
+					    	</div>
 						</div>
 					</div>
+				</div>
 			</div>
-			<div class="col-md-4 log card">
-					<img src="D:\web\webGithub\web\open-iconic-master\svg\laptopicon.svg" class="row" id = "brandlaptop" alt="icon name">
-					<img class="card-img-top" src="lggram.jpg">
+			<div class="col-md-4">
+				<div class="col-md-12 log logw">
+					<div class="row">
+						<img src="D:\web\webGithub\web\open-iconic-master\svg\laptopicon.svg" class="row" id = "brandlaptop" alt="icon name">
+					</div>
+					<img class="img-fluid" src="lggram.jpg">
 					<div class="card-body">
 						<h5 class="card-title">new laptop form lg</h5>
 						<p class="card-text">by ttv</p>
+						<hr>
 						<div class="row">
-							<div class="col-md-4">
+							<div class="col-md-6">
 					    		<img class="img-fluid" src="lggram.jpg">
 					    	</div>
-					    	<div class="col-md-8">
+					    	<div class="col-md-6">
 					    		<h5 class="card-title">new laptop form lg</h5>
 								<p class="card-text">by ttv</p>	
 					    	</div>
 						</div>
 						<div class="row">
-							<div class="col-md-4">
-						    	<img class="img-fluid" src="lggram.jpg">
-						    </div>
-						    <div class="col-md-8">
-						    		<h5 class="card-title">new laptop form lg</h5>
-									<p class="card-text">by ttv</p>	
-						    </div>
+							<div class="col-md-6">
+					    		<img class="img-fluid" src="lggram.jpg">
+					    	</div>
+					    	<div class="col-md-6">
+					    		<h5 class="card-title">new laptop form lg</h5>
+								<p class="card-text">by ttv</p>	
+					    	</div>
 						</div>
 						<div class="row">
-							<div class="col-md-4">
-						    	<img class="img-fluid" src="lggram.jpg">
-						    </div>
-						    <div class="col-md-8">
-						    		<h5 class="card-title">new laptop form lg</h5>
-									<p class="card-text">by ttv</p>	
-						    </div>
+							<div class="col-md-6">
+					    		<img class="img-fluid" src="lggram.jpg">
+					    	</div>
+					    	<div class="col-md-6">
+					    		<h5 class="card-title">new laptop form lg</h5>
+								<p class="card-text">by ttv</p>	
+					    	</div>
 						</div>
 					</div>
-					
+				</div>
 			</div>
-			<div class="col-md-4 log card">
-					<img src="D:\web\webGithub\web\open-iconic-master\svg\watch.svg" class="row"  id = "brandwatch" alt="icon name">
-					<img class="card-img-top" src="lggram.jpg">
+			<div class="col-md-4">
+				<div class="col-md-12 log logw">
+					<div class="row">
+						<img src="D:\web\webGithub\web\open-iconic-master\svg\watch.svg" class="row"  id = "brandwatch" alt="icon name" >
+					</div>
+					<img class="img-fluid" src="lggram.jpg">
 					<div class="card-body">
 						<h5 class="card-title">new laptop form lg</h5>
 						<p class="card-text">by ttv</p>
+						<hr>
 						<div class="row">
-							<div class="col-md-4">
+							<div class="col-md-6">
 					    		<img class="img-fluid" src="lggram.jpg">
 					    	</div>
-					    	<div class="col-md-8">
+					    	<div class="col-md-6">
 					    		<h5 class="card-title">new laptop form lg</h5>
 								<p class="card-text">by ttv</p>	
 					    	</div>
 						</div>
 						<div class="row">
-							<div class="col-md-4">
-						    	<img class="img-fluid" src="lggram.jpg">
-						    </div>
-						    <div class="col-md-8">
-						    		<h5 class="card-title">new laptop form lg</h5>
-									<p class="card-text">by ttv</p>	
-						    </div>
+							<div class="col-md-6">
+					    		<img class="img-fluid" src="lggram.jpg">
+					    	</div>
+					    	<div class="col-md-6">
+					    		<h5 class="card-title">new laptop form lg</h5>
+								<p class="card-text">by ttv</p>	
+					    	</div>
 						</div>
 						<div class="row">
-							<div class="col-md-4">
-						    	<img class="img-fluid" src="lggram.jpg">
-						    </div>
-						    <div class="col-md-8">
-						    		<h5 class="card-title">new laptop form lg</h5>
-									<p class="card-text">by ttv</p>	
-						    </div>
+							<div class="col-md-6">
+					    		<img class="img-fluid" src="lggram.jpg">
+					    	</div>
+					    	<div class="col-md-6">
+					    		<h5 class="card-title">new laptop form lg</h5>
+								<p class="card-text">by ttv</p>	
+					    	</div>
 						</div>
 					</div>
+				</div>
 			</div>
 		</div>
+
 	</div>
+	<footer class="page-footer font-small stylish-color-dark pt-4">
+    <div class="container text-center text-md-left">
+      <div class="row">
+        <div class="col-md-4 mx-auto">
+        </div>
+        <hr class="clearfix w-100 d-md-none">
+        <div class="col-md-2 mx-auto">
+        </div>
+        <hr class="clearfix w-100 d-md-none">
+        <div class="col-md-2 mx-auto">
+        </div>
+      </div>
+    </div>
+    <hr>
+    <ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">
+        <a href="https://vi-vn.facebook.com/" target="_blank" class="fa fa-facebook"></a>
+      </li>
+      <li class="list-inline-item">
+        <a href="#" class="fa fa-twitter"></a>
+      </li>
+      <li class="list-inline-item">
+        <a href="#" class="fa fa-google-plus"></a>
+      </li>
+      <li class="list-inline-item">
+        <a href="#" class="fa fa-linkedin"></a>
+      </li>
+      <li class="list-inline-item">
+       <a href="#" class="fa fa-youtube"></a>
+      </li>
+    </ul>
+    <div class="footer-copyright text-center py-3">Design and Idea About Tech News Website By:
+      <a>Truong Tran Vy and Nguyen Thanh Thuy</a>
+    </div>
+</footer>
+	
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
