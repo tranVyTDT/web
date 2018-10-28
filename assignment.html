@@ -4,30 +4,103 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="iconTitle.ico" type="image/x-icon">
 	<title> Your News</title>
 <link rel="stylesheet" type="text/css" href="header.css">
 <link rel="stylesheet" type="text/css" href="body.css">
 <link rel="stylesheet" type="text/css" href="footer.css">
+<link rel="stylesheet" type="text/css" href="signin.css">
 <link href="/open-iconic/font/css/open-iconic.css" rel="stylesheet">		
 <script src="header.js"></script>
+<script src="signin.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+	<div id="myNav" class="overlay">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <div class="overlay-content">
+		<div class="container">
+		    	<div class="row">
+					<div class="col-md-12 col-md-offset-3">
+						<div class="panel panel-login">
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-lg-12">
+										<form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
+											<div class="form-group">
+												<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+											</div>
+											<div class="form-group">
+												<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+											</div>
+											<div class="form-group text-center">
+												<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+												<label for="remember"> Remember Me</label>
+											</div>
+											<div class="form-group">
+												<div class="row">
+													<div class="col-sm-3"></div>
+													<div class="col-sm-6 col-sm-offset-3">
+														<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+													</div>
+													<div class="col-sm-3"></div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="row">
+													<div class="col-lg-12">
+														<div class="text-center">
+															<a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</form>
+										<form id="register-form" action="https://phpoll.com/register/process" method="post" role="form" style="display: none;">
+											<div class="form-group">
+												<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+											</div>
+											<div class="form-group">
+												<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+											</div>
+											<div class="form-group">
+												<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+											</div>
+											<div class="form-group">
+												<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+											</div>
+											<div class="form-group">
+												<div class="row">
+													<div class="col-sm-6 col-sm-offset-3">
+														<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	  </div>
+	</div>
 	<div class="container-fluid fixed-top" id = "header">
 		<div class = "row ">
 			<div class = "col"><img class = "card-img-top" id = "icon" src="icon.png"></div>
 			<div class = "col"><h1 id="header1">Tech News</h1></div>
 			<div class = "col" id = "login">
-				<a href = "#" onclick="singin()">Sign In </a><span><a> | </a></span><a href="#">Sign Up</a>
+				<a href = "#" onclick="openNav()">Sign In </a><span><a> | </a></span><a href="#">Sign Up</a>
 	        </div>
 		</div>
 		<div class = "row" id = "brand">
-			<div class = "col" id = "lg"  href="#"><a  > LG</a></div>
-			<div class = "col" id = "ss"  href="#"><a  > SAMSUNG</a></div>
-			<div class = "col" id = "ap"  href="#"><a  > APPLE</a></div>
-			<div class = "col" id = "so"  href="#"><a  > SONY</a></div>
-			<div class = "col" id = "pi"  href="#"><a  > PIXEL</a></div>
+			<div class = "col" id = "lg"  href="#" onclick="window.open('LG.html','mywindow');" style="cursor: pointer;"><a > LG</a></div>
+			<div class = "col" id = "ss"  href="#" onclick="window.open('SAMSUNG.html','mywindow');" style="cursor: pointer;"><a  > SAMSUNG</a></div>
+			<div class = "col" id = "ap"  href="#" onclick="window.open('APPLE.html','mywindow');" style="cursor: pointer;"><a  > APPLE</a></div>
+			<div class = "col" id = "so"  href="#" onclick="window.open('SONY.html','mywindow');" style="cursor: pointer;"><a  > SONY</a></div>
+			<div class = "col" id = "pi"  href="#" onclick="window.open('PIXEL.html','mywindow');" style="cursor: pointer;"><a  > PIXEL</a></div>
 		</div>
 		<hr style="margin-top: 0px">
 	</div>
@@ -40,21 +113,25 @@
 			</div>
 		</div>
 		<div class="row px-5 py-3 mx-5" >
-			<div class="col-md-8 ">
-				<div class="col-md-12 log logw">
-					<img class="card-img-top" src="lggram.jpg">
-					<div class="card-body">
-						<h2 class="card-title">new laptop form lg</h2>
-						<p class="card-text">by ttv</p>
-					</div>
+			<div class="col-md-8 " style="height: 300px">
+				<div class="col-md-12 log logw row " style="margin: 0px">
+						<div class="col-md-6">
+							<img class="card-img-top" src="lggram.jpg">
+						</div>
+						<div class="col-md-6">
+							<div class="card-body cardbody">
+								<h2 class="card-title">new laptop form lg</h2>
+								<p class="card-text">by ttv</p>
+							</div>
+						</div>
 				</div>
 			</div>
-			<div class="col-md-4" >
+			<div class="col-md-4" style="height: 300px" >
 				<div class="col-md-12 log logw">
-					<img class="card-img-top" src="lggram.jpg">
-					<div class="card-body">
-						<h2 class="card-title">new laptop form lg</h2>
-						<p class="card-text">by ttv</p>
+					<img class="card-img-top" src="lggram.jpg" >
+					<div class="card-body cardbody">
+						<h2 class="card-title" style="height: 66% ; padding: 0px">new laptop form lg</h2>
+						<p class="card-text" style="height: 33%">by ttv</p>
 					</div>
 				</div>
 			</div>
@@ -62,30 +139,38 @@
 		<div class="row px-5 py-3 mx-5" >
 			<div class="col-md-6">
 				<div class="col-md-12">
-					<div class="row pb-2">
-						<div class="col-md-12 log logw">
+					<div class="row pb-2" style="height: 150px">
+						<div class="col-md-12 log logw row " style="margin: 0px">
+						<div class="col-md-6" style="padding: 0px">
 							<img class="card-img-top" src="lggram.jpg">
-							<div class="card-body">
+						</div>
+						<div class="col-md-6" style="padding: 0px">
+							<div class="card-body cardbody">
 								<h2 class="card-title">new laptop form lg</h2>
 								<p class="card-text">by ttv</p>
 							</div>
 						</div>
+				</div>
 					</div>
-					<div class="row  pt-2">
-						<div class="col-md-12 log logw">
+					<div class="row  pt-2" style="height: 150px">
+						<div class="col-md-12 log logw row " style="margin: 0px">
+						<div class="col-md-6" style="padding: 0px">
 							<img class="card-img-top" src="lggram.jpg">
-							<div class="card-body">
+						</div>
+						<div class="col-md-6" style="padding: 0px">
+							<div class="card-body cardbody">
 								<h2 class="card-title">new laptop form lg</h2>
 								<p class="card-text">by ttv</p>
 							</div>
 						</div>
+				</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6" >
+			<div class="col-md-6" style="height: 300px">
 				<div class="col-md-12 log logw">
 					<img class="card-img-top" src="lggram.jpg">
-					<div class="card-body">
+					<div class="card-body cardbody">
 						<h2 class="card-title">new laptop form lg</h2>
 						<p class="card-text">by ttv</p>
 					</div>
@@ -93,13 +178,13 @@
 			</div>
 		</div>
 		<div class="row px-5 py-3 mx-5 " >
-			<div class=" col-md-12">
+			<div class=" col-md-12" style="height: 300px">
 				<div class="col-md-12 log logw row " style="margin: 0px">
-						<div class="col-md-8">
+						<div class="col-md-6">
 							<img class="card-img-top" src="lggram.jpg">
 						</div>
-						<div class="col-md-4">
-							<div class="card-body">
+						<div class="col-md-6">
+							<div class="card-body cardbody">
 								<h2 class="card-title">new laptop form lg</h2>
 								<p class="card-text">by ttv</p>
 							</div>
@@ -114,7 +199,7 @@
 						<img src="D:\web\webGithub\web\open-iconic-master\svg\phoneicon.svg" class="row" id = "brandphone" alt="icon name">
 					</div>
 					<img class="img-fluid" src="lggram.jpg">
-					<div class="card-body">
+					<div class="card-body ">
 						<h5 class="card-title">new laptop form lg</h5>
 						<p class="card-text">by ttv</p>
 						<hr>
@@ -266,7 +351,7 @@
       <a>Truong Tran Vy and Nguyen Thanh Thuy</a>
     </div>
 </footer>
-	
+
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

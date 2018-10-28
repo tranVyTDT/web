@@ -19,15 +19,25 @@
 #brandlaptop{
 	background-color: #80deea;
 	height: 50px;
-		margin: 0px;
+	margin: 0px;
 	width: 100%;
 }
 .logw{
 	height: 100%;
 }
 .card-img-top{
-	height: 77%;
+	height: 66%;
 }
-.card-body{
+.container .card-body{
 	height: 33%;
+	padding: 0px;
+	margin: 0px;
+}
+.card-title{
+	padding: 0px;
+	margin: 0px;
+}
+.card-text{
+	padding: 0px;
+	margin: 0px;
 }

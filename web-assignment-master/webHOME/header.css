@@ -1,0 +1,79 @@
+body {margin:0;}
+	#header{
+		 background-color: #fff;
+		  text-align: center;
+		  font-weight: bold;
+		  top: 0;
+		  width: 100%;
+		  transition: 0.2s;
+	}
+	 .container-fluid {
+		text-align: center;	
+		width: 100%;
+		margin: 0px 0px;
+		padding: 0px 0px;
+		border: 0px;
+	}
+	.container-fluid .row .col {
+		text-align: center;
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+		border: 0px;
+	}
+	 #login a{
+		float: right;
+		height:30px;
+		padding: 0px;
+		text-decoration: none;
+	}
+	.container-fluid .row {
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+		border: 0px;
+	}
+	.container-fluid .row .col img{
+		float: left;
+		overflow: auto;
+		width: 100px;
+		height: 100px;
+	}
+	#brand a {
+		margin: 0px;
+		padding: 0px;
+		
+	}
+	#brand{
+		width: 100%;
+	    overflow: auto;
+	}
+	.container-fluid #brand .col{
+		width: 20%;
+		float: left;
+		border: 0.5px solid #ccc;
+	}
+	#brand a{
+	    text-align: center;
+	    transition: all 0.3s ease;
+	}
+	#lg:hover{
+		 background-color: #f44336;
+		 color: #087f23;
+	}
+	#ss:hover{
+		 background-color: #e91e63;
+		 color: #0069c0;
+	}
+	#ap:hover{
+		 background-color: #9c27b0;
+		 color: #007ac1;
+	}
+	#so:hover{
+		 background-color: #673ab7;
+		 color: #008ba3;
+	}
+	#pi:hover{
+		 background-color: #3f51b5;
+		 color: #00675b	;
+	}

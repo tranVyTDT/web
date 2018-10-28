@@ -12,7 +12,7 @@ function scrollFunction() {
 		myimg.style.width = "50px";
     } else{
     	 x.style.display = "block";
-    	 document.getElementById("header1").style.fontSize = "70px";
+    	 document.getElementById("header1").style.fontSize = "65px";
     	 myimg.style.height = "100px";
 		myimg.style.width = "100px";
     }
