@@ -7,6 +7,9 @@ body {margin:0;}
 		  width: 100%;
 		  transition: 0.2s;
 	}
+	#header1{
+		font-size : 70px;
+	}
 	 .container-fluid {
 		text-align: center;	
 		width: 100%;
