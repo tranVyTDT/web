@@ -3,10 +3,13 @@ body {margin:0;}
 		 background-color: #fff;
 		  text-align: center;
 		  font-weight: bold;
-		  position: fixed;
 		  top: 0;
 		  width: 100%;
 		  transition: 0.2s;
+		  text-decoration: none;
+	}
+	#header1{
+		font-size : 70px;
 	}
 	 .container-fluid {
 		text-align: center;	
@@ -21,14 +24,13 @@ body {margin:0;}
 		margin: 0px;
 		padding: 0px;
 		border: 0px;
+
 	}
-	.container-fluid .row .col h1{
-		font-size: 300%;
-		margin : 20px 0px;
-	}
-	.container-fluid .row .col .glyphicon{
-		width:150px;
-		height:150px;
+	 #login a{
+		float: right;
+		height:30px;
+		padding: 0px;
+		text-decoration: none;
 	}
 	.container-fluid .row {
 		width: 100%;
@@ -39,11 +41,13 @@ body {margin:0;}
 	.container-fluid .row .col img{
 		float: left;
 		overflow: auto;
-		width: 80px;
-		height: 50%;
-		margin: 20px 0px;
+		width: 100px;
+		height: 100px;
+	}
+	.container-fluid .row .col1 img{
 		
-
+		width: 200px;
+		height: 100px;
 	}
 	#brand a {
 		margin: 0px;
@@ -62,24 +66,30 @@ body {margin:0;}
 	#brand a{
 	    text-align: center;
 	    transition: all 0.3s ease;
+	    text-decoration: none;
 	}
 	#lg:hover{
 		 background-color: #f44336;
-		 color: #7f0000;
+		 color: #087f23;
+		 
 	}
 	#ss:hover{
-		 background-color: #3f51b5;
-		 color: #000051;
+		 background-color: #e91e63;
+		 color: #0069c0;
+		 
 	}
 	#ap:hover{
-		 background-color: #009688;
-		 color: #00251a;
+		 background-color: #9c27b0;
+		 color: #007ac1;
+		 
 	}
 	#so:hover{
-		 background-color: #ffeb3b;
-		 color: #bc5100;
+		 background-color: #673ab7;
+		 color: #008ba3;
+		 
 	}
 	#pi:hover{
-		 background-color: #78909c;
-		 color: #000a12	;
+		 background-color: #3f51b5;
+		 color: #00675b;
+		 
 	}

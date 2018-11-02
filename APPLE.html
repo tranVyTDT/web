@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title> Apple: "Think different"</title>
+<!-------------------------------------------------------------------><!------------------------------------------------------------------->
+<!-------------------------------------------------------------------><!------------------------------------------------------------------->
+<!-------------------------------------------------------------------><!------------------------------------------------------------------->
+<link rel="stylesheet" type="text/css" href="header.css">
+<link rel="stylesheet" type="text/css" href="body.css">
+<link rel="stylesheet" type="text/css" href="footer.css">
+<link rel="icon" href="iconTitle.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="signin.css">
+<script src="signin.js"></script>
+<link href="/open-iconic/font/css/open-iconic.css" rel="stylesheet">    
+<script src="apple.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-------------------------------------------------------------------><!------------------------------------------------------------------->
+<!-------------------------------------------------------------------><!------------------------------------------------------------------->
+<!-------------------------------------------------------------------><!------------------------------------------------------------------->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<!-------------------------------------------------------------------><!------------------------------------------------------------------->
+<!-------------------------------------------------------------------><!------------------------------------------------------------------->
+<!-------------------------------------------------------------------><!------------------------------------------------------------------->
+</head>
+<!-------------------------------------------------------------------><!------------------------------------------------------------------->
+<!-------------------------------------------------------------------><!------------------------------------------------------------------->
+<!-------------------------------------------------------------------><!------------------------------------------------------------------->
+
+<body>
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+    <div class="container">
+          <div class="row">
+          <div class="col-md-12 col-md-offset-3">
+            <div class="panel panel-login">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
+                      <div class="form-group">
+                        <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                      </div>
+                      <div class="form-group text-center">
+                        <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+                        <label for="remember"> Remember Me</label>
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-sm-3"></div>
+                          <div class="col-sm-6 col-sm-offset-3">
+                            <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+                          </div>
+                          <div class="col-sm-3"></div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="text-center">
+                              <a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <form id="register-form" action="https://phpoll.com/register/process" method="post" role="form" style="display: none;">
+                      <div class="form-group">
+                        <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-sm-6 col-sm-offset-3">
+                            <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid fixed-top" id = "header">
+    <div class = "row ">  
+        <div class = "col">
+           <a  href="assignment.html"><img class = "card-img-top" id = "icon1" src="icon.png" style="margin: 0px; float: left"></a></div>
+
+      <div class = "col1">
+          <a href="APPLE.html"><img class = "card-img-top" id = "header1" src="apple.jpg" style="margin: 0px"></a>
+        </div>
+     
+      <div class = "col" id = "login">
+        <a href = "#" onclick="openNav()">Sign In </a><span><a> | </a></span><a href="#">Sign Up</a>
+          </div>
+    </div>
+<!-------------------------------------------------------------------><!------------------------------------------------------------------->
+<!-------------------------------------------------------------------><!------------------------------------------------------------------->
+<!-------------------------------------------------------------------><!------------------------------------------------------------------->
+    <div class = "row" id = "brand">
+          <div class = "col" id = "lg"> <a href="LG.html"; target="_blank">LG</a></div>
+          <div class = "col" id = "ss">  <a href="SAMSUNG.html"; target="_blank">SAMSUNG</a></div>
+          <div class = "col" id = "ap">  <a href="APPLE.html">APPLE</a></div>
+          <div class = "col" id = "so">  <a href="SONY.html"; target="_blank">SONY</a></div>
+          <div class = "col" id = "pi">  <a href="PIXEL.html"; target="_blank">PIXEL</a></div>
+    </div>
+    <hr style="margin-top: 0px">
+  </div>
+
+<!-------------------------------------------------------------------><!------------------------------------------------------------------->
+<!-------------------------------------------------------------------><!------------------------------------------------------------------->
+<!---------------------------------------------------------------THÔNG TIN SẢN PHẨM KHI CLICK CHUỘT------------------------------------------------------------------>
+
+<div class="container" style="margin-bottom: 50px;">
+  <div class="row">
+        <div class="col-md-4">
+        <a href="http://www.lgnewsroom.com/2018/10/lg-delivers-ultimate-five-camera-smartphone-with-lg-v40-thinq/" class="thumbnail">
+                <img src="http://www.lgnewsroom.com/wp-content/uploads/2018/10/LG-V40-ThinQ-0011-243x120.jpg" alt="LG DELIVERS ULTIMATE FIVE CAMERA SMARTPHONE WITH LG V40 THINQ" class="landscape thumbnail item-thumb thumb" width="243" height="120" itemprop="image">            
+            </a>    
+    </div>
+         
+        <div class="col-md-8">
+              <h5 class="title"><a href="http://www.lgnewsroom.com/2018/10/lg-delivers-ultimate-five-camera-smartphone-with-lg-v40-thinq/">LG DELIVERS ULTIMATE FIVE CAMERA SMARTPHONE WITH LG V40 THINQ</a></h5>
+            <time class="updated" datetime="2018-10-04T06:00:31+00:00" pubdate="">October 4, 2018</time>
+            <p>A Truly All-Encompassing Smartphone Camera Experience to Capture Every Perspective SEOUL, Oct. 4, 2018 — LG Electronics (LG) today unveiled<a class="moretag" href="http://www.lgnewsroom.com/2018/10/lg-delivers-ultimate-five-camera-smartphone-with-lg-v40-thinq/"> …</a></p>
+        </div>
+    </div>
+</div>     
+   
+
+<hr>
+<div class="container">
+  <div class="row">
+        <div class="col-md-4">
+        <a href="http://www.lgnewsroom.com/2018/10/lg-delivers-ultimate-five-camera-smartphone-with-lg-v40-thinq/" class="thumbnail">
+                <img src="http://www.lgnewsroom.com/wp-content/uploads/2018/10/LG-V40-ThinQ-0011-243x120.jpg" alt="LG DELIVERS ULTIMATE FIVE CAMERA SMARTPHONE WITH LG V40 THINQ" class="landscape thumbnail item-thumb thumb" width="243" height="120" itemprop="image">            
+            </a>    
+    </div>
+         
+        <div class="col-md-8">
+              <h5 class="title"><a href="http://www.lgnewsroom.com/2018/10/lg-delivers-ultimate-five-camera-smartphone-with-lg-v40-thinq/">LG DELIVERS ULTIMATE FIVE CAMERA SMARTPHONE WITH LG V40 THINQ</a></h5>
+            <time class="updated" datetime="2018-10-04T06:00:31+00:00" pubdate="">October 4, 2018</time>
+            <p>A Truly All-Encompassing Smartphone Camera Experience to Capture Every Perspective SEOUL, Oct. 4, 2018 — LG Electronics (LG) today unveiled<a class="moretag" href="http://www.lgnewsroom.com/2018/10/lg-delivers-ultimate-five-camera-smartphone-with-lg-v40-thinq/"> …</a></p>
+        </div>
+    </div>
+</div>     
+<hr>
+
+<div class="container">
+  <div class="row">
+        <div class="col-md-4">
+        <a href="http://www.lgnewsroom.com/2018/10/lg-delivers-ultimate-five-camera-smartphone-with-lg-v40-thinq/" class="thumbnail">
+                <img src="http://www.lgnewsroom.com/wp-content/uploads/2018/10/LG-V40-ThinQ-0011-243x120.jpg" alt="LG DELIVERS ULTIMATE FIVE CAMERA SMARTPHONE WITH LG V40 THINQ" class="landscape thumbnail item-thumb thumb" width="243" height="120" itemprop="image">            
+            </a>    
+    </div>
+         
+        <div class="col-md-8">
+              <h5 class="title"><a href="http://www.lgnewsroom.com/2018/10/lg-delivers-ultimate-five-camera-smartphone-with-lg-v40-thinq/">LG DELIVERS ULTIMATE FIVE CAMERA SMARTPHONE WITH LG V40 THINQ</a></h5>
+            <time class="updated" datetime="2018-10-04T06:00:31+00:00" pubdate="">October 4, 2018</time>
+            <p>A Truly All-Encompassing Smartphone Camera Experience to Capture Every Perspective SEOUL, Oct. 4, 2018 — LG Electronics (LG) today unveiled<a class="moretag" href="http://www.lgnewsroom.com/2018/10/lg-delivers-ultimate-five-camera-smartphone-with-lg-v40-thinq/"> …</a></p>
+        </div>
+    </div>
+</div>     
+
+<hr>
+
+<div class="container">
+  <div class="row">
+        <div class="col-md-4">
+        <a href="http://www.lgnewsroom.com/2018/10/lg-delivers-ultimate-five-camera-smartphone-with-lg-v40-thinq/" class="thumbnail">
+                <img src="http://www.lgnewsroom.com/wp-content/uploads/2018/10/LG-V40-ThinQ-0011-243x120.jpg" alt="LG DELIVERS ULTIMATE FIVE CAMERA SMARTPHONE WITH LG V40 THINQ" class="landscape thumbnail item-thumb thumb" width="243" height="120" itemprop="image">            
+            </a>    
+    </div>
+         
+        <div class="col-md-8">
+              <h5 class="title"><a href="http://www.lgnewsroom.com/2018/10/lg-delivers-ultimate-five-camera-smartphone-with-lg-v40-thinq/">LG DELIVERS ULTIMATE FIVE CAMERA SMARTPHONE WITH LG V40 THINQ</a></h5>
+            <time class="updated" datetime="2018-10-04T06:00:31+00:00" pubdate="">October 4, 2018</time>
+            <p>A Truly All-Encompassing Smartphone Camera Experience to Capture Every Perspective SEOUL, Oct. 4, 2018 — LG Electronics (LG) today unveiled<a class="moretag" href="http://www.lgnewsroom.com/2018/10/lg-delivers-ultimate-five-camera-smartphone-with-lg-v40-thinq/"> …</a></p>
+        </div>
+    </div>
+</div>     
+
+<hr>
+<div class="container">
+  <div class="row">
+        <div class="col-md-4">
+        <a href="http://www.lgnewsroom.com/2018/10/lg-delivers-ultimate-five-camera-smartphone-with-lg-v40-thinq/" class="thumbnail">
+                <img src="http://www.lgnewsroom.com/wp-content/uploads/2018/10/LG-V40-ThinQ-0011-243x120.jpg" alt="LG DELIVERS ULTIMATE FIVE CAMERA SMARTPHONE WITH LG V40 THINQ" class="landscape thumbnail item-thumb thumb" width="243" height="120" itemprop="image">            
+            </a>    
+    </div>
+         
+        <div class="col-md-8">
+              <h5 class="title"><a href="http://www.lgnewsroom.com/2018/10/lg-delivers-ultimate-five-camera-smartphone-with-lg-v40-thinq/">LG DELIVERS ULTIMATE FIVE CAMERA SMARTPHONE WITH LG V40 THINQ</a></h5>
+            <time class="updated" datetime="2018-10-04T06:00:31+00:00" pubdate="">October 4, 2018</time>
+            <p>A Truly All-Encompassing Smartphone Camera Experience to Capture Every Perspective SEOUL, Oct. 4, 2018 — LG Electronics (LG) today unveiled<a class="moretag" href="http://www.lgnewsroom.com/2018/10/lg-delivers-ultimate-five-camera-smartphone-with-lg-v40-thinq/"> …</a></p>
+        </div>
+    </div>
+</div>     
+
+<hr>
+<div class="container">
+  <div class="row">
+        <div class="col-md-4">
+        <a href="http://www.lgnewsroom.com/2018/10/lg-delivers-ultimate-five-camera-smartphone-with-lg-v40-thinq/" class="thumbnail">
+                <img src="http://www.lgnewsroom.com/wp-content/uploads/2018/10/LG-V40-ThinQ-0011-243x120.jpg" alt="LG DELIVERS ULTIMATE FIVE CAMERA SMARTPHONE WITH LG V40 THINQ" class="landscape thumbnail item-thumb thumb" width="243" height="120" itemprop="image">            
+            </a>    
+    </div>
+         
+        <div class="col-md-8">
+              <h5 class="title"><a href="http://www.lgnewsroom.com/2018/10/lg-delivers-ultimate-five-camera-smartphone-with-lg-v40-thinq/">LG DELIVERS ULTIMATE FIVE CAMERA SMARTPHONE WITH LG V40 THINQ</a></h5>
+            <time class="updated" datetime="2018-10-04T06:00:31+00:00" pubdate="">October 4, 2018</time>
+            <p>A Truly All-Encompassing Smartphone Camera Experience to Capture Every Perspective SEOUL, Oct. 4, 2018 — LG Electronics (LG) today unveiled<a class="moretag" href="http://www.lgnewsroom.com/2018/10/lg-delivers-ultimate-five-camera-smartphone-with-lg-v40-thinq/"> …</a></p>
+        </div>
+    </div>
+</div> 
+<hr>
+<!------------------------------------------------------------------FOOTER WEBSITE------------------------------------------------------------------>
+<!-------------------------------------------------------------------><!------------------------------------------------------------------->
+<!-------------------------------------------------------------------><!------------------------------------------------------------------->
+  <div style="margin-top: 50px">
+      <ul class="list-unstyled list-inline text-center">
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/TechNews/" target="_blank" class="fa fa-facebook"></a>
+        </li>
+          <li class="list-inline-item">
+            <a href="https://twitter.com/TechNews/" target="_blank" class="fa fa-twitter"></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://plus.google.com/s/Technews/top" target="_blank" class="fa fa-google-plus"></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/" target="_blank" class="fa fa-linkedin"></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.youtube.com/user/TWiTTechNews" target="_blank" class="fa fa-youtube"></a>
+          </li>
+      </ul>
+  </div>
+<!-------------------------------------------------------------------><!------------------------------------------------------------------->
+<!-------------------------------------------------------------------><!------------------------------------------------------------------->
+    <div class="footer-copyright text-center py-3"><a>Design and Idea About Tech News Website By:
+      Truong Tran Vy and Nguyen Thanh Thuy</a>
+    </div>
+
+
+</body>
+</html>
