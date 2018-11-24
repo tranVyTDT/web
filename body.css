@@ -1,0 +1,67 @@
+.log{
+	border-top: 5px solid black;
+	border-left:  0.5px solid #ccc;
+	border-right:  0.5px solid #ccc;
+	border-bottom:  2.5px solid #ccc;
+}
+#brandphone{
+	background-color: #f48fb1;
+	height: 50px;
+	margin: 0px;
+	width: 100%;
+}
+#brandwatch{
+	background-color: #ffe082;
+	height: 50px;
+	margin: 0px;
+	width: 100%;
+}
+#brandlaptop{
+	background-color: #80deea;
+	height: 50px;
+	margin: 0px;
+	width: 100%;
+}
+.logw{
+	height: 100%;
+}
+.card-img-top{
+	height: 66%;
+}
+.cardbody{
+	height: 33%;
+	padding: 0px;
+	margin: 0px;
+}
+.card-title{
+	padding: 0px;
+	margin: 0px;
+}
+.card-text{
+	padding: 0px;
+	margin: 0px;
+}
+<div class="container">
+		<div class="row mx-5">
+			<div align="center" class="col-md-12 px-5">
+				<img src="lggram.jpg">
+			</div>
+		</div>
+		<div class="row mx-5">
+			<div class="col-md-12 px-5">
+				<P>LG gram siêu nhẹ chỉ 965 gram nhưng sở hữu màn hình lên tới 13,3 inch, điều mà các đối thủ cùng phân khúc khó đạt được, xứng đáng là một trong những chiếc máy tính xách tay nhẹ nhất trên thị trường. LG gram đã thiết lập nên tiêu chuẩn mới về tính cơ động tuyệt vời của máy tính xách tay</P>
+				<P>LG gram đã được cập nhật với pin 72Wh, vì vậy bạn có thể làm việc lên đến 22,5 giờ. Sạc pin đầy cho máy tính xách tay và bạn có thể lên đường, không cần phải lo lắng tìm ổ cắm tiếp theo.</P>
+				<P>Màn hình 14 inch có kích thước nhỏ gọn như laptop 13 inch. Đường viền mỏng giúp màn hình trông lớn hơn và vừa "khít" với phần thân nhỏ gọn. Sự kết hợp của đường viền mảnh mai cùng kiểu dáng gọn nhẹ giúp bạn dễ dàng mang theo ở bất cứ đâu.
+				*So sánh với dòng laptop 14 inch thông thường</P>
+				<P>Màn hình IPS với độ phân giải Full HD (1920X1080) giúp tạo nên chất lượng hình ảnh tuyệt hảo. Bên cạnh đó màu sắc hiển thị chính xác, độ tương phản hình ảnh và chi tiết rõ nét vượt trội cũng là ưu điểm nâng cao khả năng hiệu suất làm việc tốt nhất và đem lại trải nghiệm giải trí phong phú hơn.</P>
+			</div>
+		</div>
+		<div class = "row mx-5" >
+			<div  align="center"  class = "col-md-12 px-5">
+				<iframe width="100%" height="400px"
+					src="https://www.youtube.com/embed/BXogn99dOec?autoplay=1">
+				</iframe>
+			</div>
+		</div>
+
+	</div>

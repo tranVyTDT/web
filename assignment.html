@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="css/footer.css">
 <link rel="stylesheet" type="text/css" href="css/signin.css">
 <link rel="stylesheet" type="text/css" href="css/write.css">
-<link href="D:\web\webGithub\web\open-iconic-master\font\css\open-iconic.css" rel="stylesheet">		
+<link href="open-iconic-master\font\css\open-iconic.css" rel="stylesheet">		
 <script src="js/header.js"></script>
 <script src="js/signin.js"></script>
 <script src="js/upfile.js"></script>
@@ -35,7 +35,8 @@
 		  		<div class="col-md-2 row">
 		  			<div href="javascript:void(0)" 	" onclick="closeNav1() " style="cursor: pointer;color: #fff; font-size: 120%; height: 20px;">Close</div>
 		  			<hr>
-		  			<div href="javascript:void(0)"  " onclick="closeNav1() " style="cursor: pointer;color: #fff; font-size: 120%; height: 20px;">Up post</div>
+		  			<form action="insertdata.php" method="POST"> 
+		  				<input type="submit" value="Submit" name="up load"></form>
 						<span class="input-group-btn">
 					                    <div class="btn btn-default image-preview-input">
 					                        <span class="glyphicon glyphicon-folder-open"></span>
