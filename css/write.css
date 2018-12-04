@@ -13,59 +13,8 @@
 
 .overlay-content1 {
     position: relative;
-    top: 25%;
     width: 100%;
-    text-align: center;
-    margin-top: 30px;
+    margin: 0px;
 }
 
-.overlay1 a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
 
-.overlay1 a:hover, .overlay1 a:focus {
-    color: #f1f1f1;
-}
-
-.overlay1 .closebtn1 {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-}
-
-@media screen and (max-height: 450px) {
-  .overlay1 a {font-size: 20px}
-  .overlay1 .closebtn1 {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-}
-.image-preview-input {
-    position: relative;
-    overflow: hidden;
-    margin: 0px;    
-    color: #333;
-    background-color: #fff;
-    border-color: #ccc;    
-}
-.image-preview-input input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    font-size: 10px;
-    cursor: pointer;
-    opacity: 0;
-    filter: alpha(opacity=0);
-}
-.image-preview-input-title {
-    margin-left:2px;
-}
