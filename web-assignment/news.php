@@ -12,8 +12,8 @@
 <link rel="stylesheet" type="text/css" href="css\signin.css">
 <link rel="stylesheet" type="text/css" href="css\write.css">
 <link href="open-iconic-master\font\css\open-iconic.css" rel="stylesheet">		
-<script src="js\header.js"></script>
-<script src="js\signin.js"></script>
+<script src="js\head.js"></script>
+<script src="js\login.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>

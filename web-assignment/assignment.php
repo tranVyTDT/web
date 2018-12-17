@@ -10,10 +10,9 @@
 <link rel="stylesheet" type="text/css" href="css\body.css">
 <link rel="stylesheet" type="text/css" href="css\footer.css">
 <link rel="stylesheet" type="text/css" href="css\signin.css">
-<link rel="stylesheet" type="text/css" href="css\write.css">
-<link href="open-iconic-master\font\css\open-iconic.css" rel="stylesheet">		
-<script src="js\header.js"></script>
-<script src="js\signin.js"></script>
+<link rel="stylesheet" type="text/css" href="css\write.css">	
+<script src="js\head.js"></script>
+<script src="js\login.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -67,17 +66,10 @@
 							$image = $_POST['image'];
 							$Date = date("Y/m/d");
 							
-
-	/*
-							$image = $_FILES['image']['tmp_name'];
-							$imagename = $_FILES['image']['name'];
-							$file_to_saved = "dcuments/".$imagename;
-							move_uploaded_file($image, $file_to_saved);
-*/
 			
 	
 
-							$conn = mysqli_connect($servername, $username, $password, $database);
+							$conn = mysqli_connect($servername, $username, $password, $database) or die("dieeeeeeeeee");
 
 							$sql1 = "SELECT * FROM news WHERE IDnews = ( SELECT MAX(IDnews) FROM news ) ";
 
@@ -92,7 +84,7 @@
 
 
 							
-							$sql = "INSERT INTO news (IDnews, IDwriter, Brands, TypeOfDevices, Titles, IMGHeaders, Content, VideoFooter, DateNews) VALUES ('".$IDnews1."','000000','".$Brands."','".$TypeOfDevices."','".$Titles."','".$image."','".$Content."','youtube.com','".$Date."')";
+							$sql = "INSERT INTO news (IDnews, IDwriter, Brands, TypeOfDevices, Titles, IMGHeaders, Content, VideoFooter, DateNews) VALUES ('".$IDnews1."','000000','".$Brands."','".$TypeOfDevices."','".$Titles."','".$image."','".$Content."','".$VideoFooter."','".$Date."')";
 							
 							if (mysqli_query($conn, $sql)) {
 								echo "<script type='text/javascript'>alert('succeed');</script>";
@@ -113,7 +105,7 @@
 	  <div class="overlay-content">
 		<div class="container">
 		    	<div class="row">
-					<form class="col-md-12 form-group">
+					<form class="col-md-12 form-group" method="post" enctype="multipart/form-data">
 						<div class="form-group">
 							<label for="usr" style='color:WHITE'>Name:</label>
 							<input type="text" class="form-control" id="usrin" name="username">
@@ -123,8 +115,42 @@
 							<input type="password" class="form-control" id="pwdin" name="password">
 							
 						</div>
-							<button type="submit" class="btn btn-primary">Register</button>
+							<button type="submit" class="btn btn-primary" name = "submit3">Log In</button>
 					</form>
+					<?php
+						if(isset($_POST["submit3"]))
+						{
+							$servername = "localhost";
+							$database = "web";
+							$username = "root";
+							$password = "pass";
+
+							//data
+							$name = $_POST['username'];
+							$pass = $_POST['password'];
+
+							$conn = mysqli_connect($servername, $username, $password, $database) ;
+
+							$sql1 = "SELECT * FROM writer  ";
+
+
+							$result = mysqli_query($conn, $sql1);
+
+							$row = mysqli_fetch_array($result);
+							if(strcmp($row['Password'], $pass) == 0 )
+							{
+								echo "<script type='text/javascript'>alert('log in succeed');login();</script>";
+								echo "<script></script>";
+								
+							}
+							else
+							{
+								echo "<script type='text/javascript'>alert('log in error');</script>";
+							}
+
+							mysqli_close($conn);
+						}
+					?>
 				</div>
 			</div>
 	  </div>
@@ -135,7 +161,7 @@
 	  <div class="overlay-content">
 		<div class="container">
 		    	<div class="row">
-					<form class="col-md-12 form-group">
+					<form class="col-md-12 form-group" method="post" enctype="multipart/form-data">
 						<div class="form-group">
 							<label for="usr" style='color:WHITE'>Name:</label>
 							<input type="text" class="form-control" id="usrup" name="username">
@@ -144,10 +170,56 @@
 							<label for="pwd" style='color:WHITE'>Password:</label>
 							<input type="password" class="form-control" id="pwdup" name="password">
 							<label for="pwd" style='color:WHITE'>Rewrite Password:</label>
-							<input type="password" class="form-control" id="pwdreup" name="password">
+							<input type="password" class="form-control" id="pwdreup" name="repassword">
 						</div>
-							<button type="submit" class="btn btn-primary">Register</button>
+							<button type="submit" class="btn btn-primary" name="submit2">Register</button>
 					</form>
+					<?php
+						if(isset($_POST["submit2"]))
+						{
+							$servername = "localhost";
+							$database = "web";
+							$username = "root";
+							$password = "pass";
+
+							//data
+							$name = $_POST['username'];
+							$pass = $_POST['password'];
+							$repass = $_POST['repassword'];
+
+							$conn = mysqli_connect($servername, $username, $password, $database) ;
+
+							$sql1 = "SELECT * FROM writer WHERE IDwriter = ( SELECT MAX(IDwriter) FROM writer ) ";
+
+
+							$result = mysqli_query($conn, $sql1);
+
+							$row = mysqli_fetch_array($result);
+
+							
+							$IDwriter1 = $row['IDwriter'] + 1;
+							
+							if(strcmp($pass, $repass) == 0)
+							{
+								$sql = "INSERT INTO writer (IDwriter, UserName,Password) VALUES ('".$IDwriter1."','".$name."','".$pass."')";
+								
+							
+								if (mysqli_query($conn, $sql)) {
+									echo "<script type='text/javascript'>alert('succeed');</script>";
+									
+								} else {
+									echo "<script type='text/javascript'>alert('error');</script>";
+									 echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+								}
+							}
+							else
+							{
+								echo "<script type='text/javascript'>alert('passwords are not the same');</script>";
+							}
+
+							mysqli_close($conn);
+						}
+					?>
 				</div>
 			</div>
 	  </div>
@@ -158,10 +230,10 @@
 			<div class = "col"><img class = "card-img-top" id = "icon" src="img/icon.png"></div>
 			<div class = "col"><h1 id="header1">Tech News</h1></div>
 			<div class = "col" id = "login">
-				<a href = "#" onclick="openSignin()">Sign In </a><span><a> 
-				|
-				</a></span><a href="#" >Sign Up</a>
-				<img  src="open-iconic-master\svg\document.svg" style="height: 20%;width: 20%; cursor:pointer " onclick="openWriter()">
+				<div id = "singinstring" style="width: auto;"><a href = "#" onclick="openSignup()">Sign Up </a></div>
+				<div id = "singupstring" style="width: auto;"><a href = "#" onclick="openSignin()">Sign In </a></div>
+				
+				<div style="height: 100%;width: 100%;float: right;"><img  src="open-iconic-master\svg\document.svg" style="height: 20%;width: 20%;float: right; cursor:pointer " onclick="openWriter()"></div>
 	        </div>
 		</div>
 		<div class = "row" id = "brand">
@@ -216,19 +288,20 @@
 								echo $row['IMGHeaders'];
 								echo "' ></div>";
 								echo "<div class='col-md-6' style='margin-bottom: auto; margin-top: auto; width: 100%;'>";
-								echo "<div class='card-body cardbody'>";
+								echo "<div class='card-body cardbody' style='padding:0px;'>";
 
-								echo "<h2 class='card-title'>" ;
 								//string right here
-								echo "<form action='news.php?check=1&amp;id= ";
+
+								echo "<form style='height:100%;' action='news.php?check=1&amp;id= ";
 								echo $row['IDnews'];
 								echo "'   method='post' target='_blank'>";
-								echo " <input type= submit style='background-color : #fff; border : 0px' value='";
+								echo "<button type='submit' style='background-color : #fff; border : 0px; width:100% ; height:100% ;padding:0px;' >";
+								echo "<span>";
 								echo $row['Titles'];
-								echo "'>";
+								echo "</span>";
+								echo "</button>";
 								echo "</form>";
 								
-								echo "</h2>";
 
 								mysqli_close($conn);
 								?>
@@ -258,17 +331,16 @@
 								echo "'  style='height: 60% ; margin: auto;' >";
 								echo "<div class='card-body cardbody' style='height: 40%; padding: 0px;'>";
 
-								echo "<h2 class='card-title' style='height : 70%; margin :0px;'>" ;
 								//string right here
-								echo "<form action='news.php?check=1&amp;id= ";
+								echo "<form style='height:100%;' action='news.php?check=1&amp;id= ";
 								echo $row['IDnews'];
 								echo "'   method='post' target='_blank'>";
-								echo " <input type= submit style='background-color : #fff; border : 0px' value='";
+								echo "<button type='submit' style='background-color : #fff; border : 0px; width:100% ; height:100% ;padding:0px;' ";
+								echo "<span>";
 								echo $row['Titles'];
-								echo "'>";
+								echo "</span>";
+								echo "</button>";
 								echo "</form>";
-
-								echo "</h2>";
 
 
 								mysqli_close($conn);
@@ -307,17 +379,17 @@
 								echo "<div class='col-md-6' style='padding: 0px'>";
 								echo "<div class='card-body'>";
 
-								echo "<h2 class='card-title'>" ;
+
 								//string right here
-								echo "<form action='news.php?check=1&amp;id= ";
+								echo "<form style='height:100%;' action='news.php?check=1&amp;id= ";
 								echo $row['IDnews'];
 								echo "'   method='post' target='_blank'>";
-								echo " <input type= submit style='background-color : #fff; border : 0px' value='";
+								echo "<button type='submit' style='background-color : #fff; border : 0px; width:100% ; height:100% ;padding:0px;' ";
+								echo "<span>";
 								echo $row['Titles'];
-								echo "'>";
+								echo "</span>";
+								echo "</button>";
 								echo "</form>";
-
-								echo "</h2>";
 
 
 								mysqli_close($conn);
@@ -350,17 +422,17 @@
 								echo "' ></div>";
 								echo "<div class='col-md-6' style='padding: 0px'>";
 								echo "<div class='card-body'>";
-								echo "<h2 class='card-title'>" ;
+								
 								//string right here
-								echo "<form action='news.php?check=1&amp;id= ";
+								echo "<form style='height:100%;' action='news.php?check=1&amp;id= ";
 								echo $row['IDnews'];
 								echo "'   method='post' target='_blank'>";
-								echo " <input type= submit style='background-color : #fff; border : 0px' value='";
+								echo "<button type='submit' style='background-color : #fff; border : 0px; width:100% ; height:100% ;padding:0px;' ";
+								echo "<span>";
 								echo $row['Titles'];
-								echo "'>";
+								echo "</span>";
+								echo "</button>";
 								echo "</form>";
-
-								echo "</h2>";
 
 
 								mysqli_close($conn);
@@ -393,17 +465,17 @@
 								echo "'  style='height: 70% ;  margin-left: 15%;margin-right: 15%; ; width: 70%' >";
 								echo "<div class='card-body cardbody' >";
 
-								echo "<h2 class='card-title'>" ;
+							
 								//string right here
-								echo "<form action='news.php?check=1&amp;id= ";
+								echo "<form style='height:100%;' action='news.php?check=1&amp;id= ";
 								echo $row['IDnews'];
 								echo "'   method='post' target='_blank'>";
-								echo " <input type= submit style='background-color : #fff; border : 0px' value='";
+								echo "<button type='submit' style='background-color : #fff; border : 0px; width:100% ; height:100% ;padding:0px;' ";
+								echo "<span>";
 								echo $row['Titles'];
-								echo "'>";
+								echo "</span>";
+								echo "</button>";
 								echo "</form>";
-
-								echo "</h2>";
 
 								mysqli_close($conn);
 								?>
@@ -436,17 +508,16 @@
 								echo "<div class='col-md-6'>";
 								echo "<div class='card-body cardbody' style='margin: auto'>";
 
-								echo "<h2 class='card-title'>" ;
 								//string right here
-								echo "<form action='news.php?check=1&amp;id= ";
+								echo "<form style='height:100%;' action='news.php?check=1&amp;id= ";
 								echo $row['IDnews'];
 								echo "'   method='post' target='_blank'>";
-								echo " <input type= submit style='background-color : #fff; border : 0px' value='";
+								echo "<button type='submit' style='background-color : #fff; border : 0px; width:100% ; height:100% ;padding:0px;' ";
+								echo "<span>";
 								echo $row['Titles'];
-								echo "'>";
+								echo "</span>";
+								echo "</button>";
 								echo "</form>";
-
-								echo "</h2>";
 
 								mysqli_close($conn);
 								?>
@@ -487,17 +558,16 @@
 								echo "'>";
 								echo "<div class='card-body '>";
 
-								echo "<h2 class='card-title'>" ;
 								//string right here
-								echo "<form action='news.php?check=1&amp;id= ";
+								echo "<form style='height:100%;' action='news.php?check=1&amp;id= ";
 								echo $row['IDnews'];
 								echo "'   method='post' target='_blank'>";
-								echo " <input type= submit style='background-color : #fff; border : 0px' value='";
+								echo "<button type='submit' style='background-color : #fff; border : 0px; width:100% ; height:100% ;padding:0px;' ";
+								echo "<span>";
 								echo $row['Titles'];
-								echo "'>";
+								echo "</span>";
+								echo "</button>";
 								echo "</form>";
-
-								echo "</h2>";
 
 								echo "<hr>";
 								$COUNT_TIME_ROW = 3;
@@ -514,17 +584,19 @@
 											echo "'>";
 										echo "</div>";
 										echo "<div class='col-md-6'>";
-											echo "<h5 class='card-title'>" ;
+											
 												//string right here
-								echo "<form action='news.php?check=1&amp;id= ";
-								echo $row['IDnews'];
-								echo "'   method='post' target='_blank'>";
-								echo " <input type= submit style='background-color : #fff; border : 0px' value='";
-								echo $row['Titles'];
-								echo "'>";
-								echo "</form>";
+												echo "<form style='height:100%;' action='news.php?check=1&amp;id= ";
+												echo $row['IDnews'];
+												echo "'   method='post' target='_blank'>";
+												echo "<button type='submit' style='background-color : #fff; border : 0px; width:100% ; height:100% ;padding:0px;' ";
+												echo "<span>";
+												echo $row['Titles'];
+												echo "</span>";
+												echo "</button>";
+												echo "</form>";
 
-											echo "</h5>";;
+											
 										echo "</div>";
 									echo "</div>";
 									$COUNT_TIME_ROW--;
@@ -564,17 +636,19 @@
 								echo "'>";
 								echo "<div class='card-body '>";
 
-								echo "<h2 class='card-title'>" ;
+								
 								//string right here
-								echo "<form action='news.php?check=1&amp;id= ";
+								echo "<form style='height:100%;' action='news.php?check=1&amp;id= ";
 								echo $row['IDnews'];
 								echo "'   method='post' target='_blank'>";
-								echo " <input type= submit style='background-color : #fff; border : 0px' value='";
+								echo "<button type='submit' style='background-color : #fff; border : 0px; width:100% ; height:100% ;padding:0px;' ";
+								echo "<span>";
 								echo $row['Titles'];
-								echo "'>";
+								echo "</span>";
+								echo "</button>";
 								echo "</form>";
 
-								echo "</h2>";
+								
 
 								echo "<hr>";
 								$COUNT_TIME_ROW = 3;
@@ -591,17 +665,19 @@
 											echo "'>";
 										echo "</div>";
 										echo "<div class='col-md-6'>";
-											echo "<h5 class='card-title'>" ;
+											
 												//string right here
-								echo "<form action='news.php?check=1&amp;id= ";
-								echo $row['IDnews'];
-								echo "'   method='post' target='_blank'>";
-								echo " <input type= submit style='background-color : #fff; border : 0px' value='";
-								echo $row['Titles'];
-								echo "'>";
-								echo "</form>";
+												echo "<form style='height:100%;' action='news.php?check=1&amp;id= ";
+												echo $row['IDnews'];
+												echo "'   method='post' target='_blank'>";
+												echo "<button type='submit' style='background-color : #fff; border : 0px; width:100% ; height:100% ;padding:0px;' ";
+												echo "<span>";
+												echo $row['Titles'];
+												echo "</span>";
+												echo "</button>";
+												echo "</form>";
 
-											echo "</h5>";
+											
 										echo "</div>";
 									echo "</div>";
 									$COUNT_TIME_ROW--;
@@ -641,17 +717,19 @@
 								echo "'>";
 								echo "<div class='card-body '>";
 								
-								echo "<h2 class='card-title'>" ;
+								
 								//string right here
-								echo "<form action='news.php?check=1&amp;id= ";
+								echo "<form style='height:100%;' action='news.php?check=1&amp;id= ";
 								echo $row['IDnews'];
 								echo "'   method='post' target='_blank'>";
-								echo " <input type= submit style='background-color : #fff; border : 0px' value='";
+								echo "<button type='submit' style='background-color : #fff; border : 0px; width:100% ; height:100% ;padding:0px;' ";
+								echo "<span>";
 								echo $row['Titles'];
-								echo "'>";
+								echo "</span>";
+								echo "</button>";
 								echo "</form>";
 
-								echo "</h2>";
+								
 								echo "<hr>";
 								$COUNT_TIME_ROW = 3;
 								while ($row = mysqli_fetch_array($result))
@@ -667,17 +745,19 @@
 											echo "'>";
 										echo "</div>";
 										echo "<div class='col-md-6'>";
-											echo "<h5 class='card-title'>" ;
+											
 												//string right here
-								echo "<form action='news.php?check=1&amp;id= ";
-								echo $row['IDnews'];
-								echo "'   method='post' target='_blank'>";
-								echo " <input type= submit style='background-color : #fff; border : 0px' value='";
-								echo $row['Titles'];
-								echo "'>";
-								echo "</form>";
+											echo "<form style='height:100%;' action='news.php?check=1&amp;id= ";
+											echo $row['IDnews'];
+											echo "'   method='post' target='_blank'>";
+											echo "<button type='submit' style='background-color : #fff; border : 0px; width:100% ; height:100% ;padding:0px;' ";
+											echo "<span>";
+											echo $row['Titles'];
+											echo "</span>";
+											echo "</button>";
+											echo "</form>";
 
-											echo "</h5>";
+										
 										echo "</div>";
 									echo "</div>";
 									$COUNT_TIME_ROW--;
